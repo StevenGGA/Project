@@ -40,8 +40,8 @@ pipe_clf = Pipeline([
     ('model',    RandomForestClassifier(random_state=42))
 ])
 param_grid_clf = {
-    'model__n_estimators': [100, 300],
-    'model__max_depth':    [None, 10, 30],
+    'model__n_estimators': [100, 300], #Try 500, 1000 for more trees
+    'model__max_depth':    [None, 10, 30], #Try 50, 100 for larger trees
 }
 
 inner_cv = GroupKFold(n_splits=3)
