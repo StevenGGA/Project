@@ -42,8 +42,8 @@ pipe = Pipeline([
 ])
 
 param_grid = {
-    'model__n_estimators': [100, 300],
-    'model__max_depth':    [None, 10, 30],
+    'model__n_estimators': [100, 300], #Try 500, 1000 for more trees
+    'model__max_depth':    [None, 10, 30], #Try 50, 100 for larger trees
     'model__max_features': ['sqrt', 'log2']
 }
 
